@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http.Json;
@@ -19,7 +19,7 @@ namespace Redaktor
         public static Figure Kvadratik = new Figure("Квадрат", 30, 30);
         public static void program()
         {
-            Console.WriteLine("Введите путь до файла: ");
+                Console.WriteLine("Введите путь до файла: ");
 
             string FilePath = Console.ReadLine();
             int CursPos = 4;
@@ -31,11 +31,11 @@ namespace Redaktor
             List<Figure> HyPabotaiPLZ;
 
             if (File.Exists(FilePath))
-            {
+            {   
                 if (Path.GetExtension(FilePath) == ".txt")
                 {
                     Console.Clear();
-                    Console.WriteLine("[ F1 ] - Сохранить файл.");
+                             Console.WriteLine("[ F1 ] - Сохранить файл.");
                     Console.WriteLine("[ F2 ] - Изменить текущий файл.");
                     Console.WriteLine("[ ESCAPE ] - Выйти");
                     Console.WriteLine("Содержимое этого TXT файла: ");
@@ -50,9 +50,9 @@ namespace Redaktor
                     {
                         HyPabotaiPLZ = (List<Figure>)xml.Deserialize(fs);
                         Console.Clear();
-                        Console.WriteLine("[ F1 ] - Сохранить файл.");
+                                   Console.WriteLine("[ F1 ] - Сохранить файл.");
                         Console.WriteLine("[ F2 ] - Изменить текущий файл.");
-                        Console.WriteLine("[ ESCAPE ] - Выйти");
+                        Console.WriteLine(  "[ ESCAPE ] - Выйти");
                         Console.WriteLine("Содержимое этого XML файла: ");
                         Console.WriteLine(HyPabotaiPLZ[0].Name + "\n" + HyPabotaiPLZ[0].Height + "\n" + HyPabotaiPLZ[0].Width +
                            "\n" + HyPabotaiPLZ[1].Name + "\n" + HyPabotaiPLZ[1].Height + "\n" + HyPabotaiPLZ[1].Width);
@@ -76,13 +76,13 @@ if (Path.GetExtension(FilePath) == ".json")
 
                 if (key.Key == ConsoleKey.F2)
                 {
-                    bool works = true;
+                    bool works =  true;
                     Console.Clear();
                     while (works)
                     {
                         Console.WriteLine("С помощью стрелок ВВЕРХ и ВНИЗ выберите нужный эелемент.");
                         Console.WriteLine("[ ENTER ] - Выбрать");
-                        Console.WriteLine("[ ESCAPE ] - Выйти");
+                        Console.WriteLine  ("[ ESCAPE ] - Выйти");
                         Console.WriteLine("Прямоугольник");
                         Console.WriteLine("Квадрат");
                         Console.SetCursorPosition(0, CursPos);
@@ -171,10 +171,10 @@ if (Path.GetExtension(FilePath) == ".json")
                 }
                 else if (key.Key == ConsoleKey.Escape)
                 {
-                    Console.Clear();
-                    Console.SetCursorPosition(0, 0);
-                    Console.WriteLine("Конец проги");
-                    Environment.Exit(0);
+                                                        Console.Clear();
+                                                        Console.SetCursorPosition(0, 0);
+                                                        Console.WriteLine("Конец проги");
+                                                        Environment.Exit(0);
                 }
             }
 
@@ -205,7 +205,7 @@ if (Path.GetExtension(FilePath) == ".json")
 
         public static void Main()
         {
-            program();
+                    program();
         }
     }
 }
